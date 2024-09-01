@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CACTUAR DISTRESSED</title>
+    <link href="https://fonts.googleapis.com/css2?family=Tarik:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background-color: black;
+            color: white;
+            font-family: 'Tarik', sans-serif;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+        h1, p {
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+            margin: 0;
+            padding: 10px;
+        }
+        h1 {
+            font-size: 24px;
+        }
+        p {
+            font-size: 18px;
+            max-width: 80%;
+            margin: 10px auto;
+        }
+        img {
+            height: 400px;
+            width: 400px;
+            display: block;
+            margin: 20px auto;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>CACTUAR DISTRESSED</h1>
+    <p>
+        Details: Our original teddy is back with rubber PRIX logo with button entry and stretchy, soft cotton perfect for lounging<br><br>
+        100% Cotton<br>
+        COLOR: BLACK<br>
+        PXOP-1021
+    </p>
+
+    <img id="photo" src="CACTUAR2.jpg" alt="Photo">
+
+    <script>
+        const photos = [
+            "CACTUAR2.jpg",
+            "CACTUAR3(1).jpg",
+
+        ];
+
+        let currentPhotoIndex = 0;
+
+        const photoElement = document.getElementById('photo');
+
+        function showNextPhoto() {
+            currentPhotoIndex = (currentPhotoIndex + 1) % photos.length;
+            photoElement.src = photos[currentPhotoIndex];
+        }
+
+        photoElement.addEventListener('click', showNextPhoto);
+    </script>
+
+</body>
+</html>
